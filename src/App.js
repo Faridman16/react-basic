@@ -6,23 +6,14 @@ import Footer from './components/Footer';
 class App extends React.Component {
   constructor(){
     super();
-    this.state = {data:'', time:''}
+    this.state = {}
   }
 
-  changeTitle(val){
-    console.log(val.target.value);
-    var input = val.target.value;
-    this.setState({data:input});
-  }
-  
   render() {
-    setTimeout(()=>{
-      this.setState({time:Date.now()});
-    }, 5000);
     return (
       <div>
         <Header />
-        <Body  text={this.state.data} changeTitle={this.changeTitle.bind(this)} time={this.state.time}/>
+        <Body  />
         <Footer />
       </div>
     );
